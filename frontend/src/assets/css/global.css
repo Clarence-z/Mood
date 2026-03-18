@@ -1,0 +1,197 @@
+/* 重置和基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--primary-bg);
+  min-height: 100vh;
+}
+
+/* 文本样式 */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 删除确认对话框样式 */
+.el-message-box {
+  border-radius: 8px !important;
+  padding: 15px !important;
+  max-width: 420px !important;
+}
+.el-button-no {
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+.el-button-no:hover {
+  background-color: white;
+  color: var(--accent-hover) !important;
+  border-color: var(--accent-color);
+}
+.el-button-yes {
+  background-color: var(--accent-color);
+  color: white !important;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+.el-button-yes:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-color);
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+.el-input {
+  --el-input-focus-border: var(--accent-color) !important;
+  --el-input-focus-border-color: var(--accent-color) !important;
+}
+.el-textarea {
+  --el-input-focus-border: var(--accent-color) !important;
+  --el-input-focus-border-color: var(--accent-color) !important;
+}
+
+.custom-select .el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px var(--accent-color) inset;
+}
+.custom-select-popper .el-select__selected-item .el-select__input-wrapper .el-select__input {
+  color: var(--accent-color) !important;  /* 选中项文字颜色 */
+}
+/* 选中项文字颜色 */
+.custom-select-popper .el-select-dropdown__item.is-selected {
+  color: var(--accent-color) !important;
+  font-weight: 500 !important;  /* 可选 */
+}
+.custom-select-popper .el-select-dropdown__item.is-selected::after {
+  background-color: var(--accent-color) !important;
+}
+
+/* 自定义日期时间选择器主题色 */
+.custom-date-popper {
+  /* 日期面板选中日期颜色（变量覆盖，不一定有效，作为后备） */
+  --el-datepicker-active-color: var(--accent-hover);
+  --el-datepicker-hover-color: var(--accent-color);
+}
+/* 今日日期文字颜色 */
+.custom-date-popper .el-date-table td.today .el-date-table-cell__text {
+  color: var(--accent-hover) !important;
+  font-weight: bold;
+}
+/* 选中日期的背景色 */
+.custom-date-popper .el-date-table td.current:not(.disabled) .el-date-table-cell__text {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  color: white !important;
+}
+/* 悬停日期背景色 */
+.custom-date-popper .el-date-table td:not(.disabled):hover .el-date-table-cell__text {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+}
+.custom-date-popper .el-date-table-cell__text:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--text-primary) !important;
+}
+.custom-date-popper td.today .el-date-table-cell__text {
+  color: var(--accent-hover) !important;
+  font-weight: bold;
+}
+.custom-date-popper td.current .el-date-table-cell__text {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  color: white !important;
+}
+/* 时间面板确认按钮颜色 */
+.custom-date-popper .el-time-panel__btn.confirm {
+  color: var(--accent-hover) !important;
+}
+/* 头部左右箭头按钮 */
+.custom-date-popper .el-picker-panel__icon-btn:hover {
+  color: var(--accent-hover) !important;
+}
+/* 头部年月切换标签 */
+.custom-date-popper .el-date-picker__header-label:hover {
+  color: var(--accent-hover) !important;
+}
+/* 底部通用按钮 */
+.custom-date-popper .el-picker-panel__btn:hover {
+  color: var(--accent-hover) !important;
+}
+.custom-date-popper .el-picker-panel__footer .el-picker-panel__link-btn:hover {
+  color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+.custom-date-popper .el-date-range-picker__header-label:hover {
+  color: var(--accent-color) !important;
+}
+
+.custom-date-popper .el-date-range-picker {
+  --el-datepicker-active-color: var(--accent-hover) !important;
+  --el-datepicker-inrange-bg-color: #faf5f5 !important;
+  --el-datepicker-inrange-hover-bg-color: #faf5f5 !important;
+  --el-datepicker-hover-text-color: var(--accent-hover) !important;
+}
+
+.custom-pager .el-pagination__total,
+.custom-pager .el-pagination__goto,
+.custom-pager .el-pagination__classifier{
+  color: var(--text-secondary) !important;
+}
+.custom-pager .btn-prev,
+.custom-pager .btn-next{
+  background-color: transparent !important;
+  color: var(--text-secondary) !important;
+}
+.custom-pager .btn-prev:hover,
+.custom-pager .btn-next:hover{
+  color: var(--accent-color) !important;
+}
+.custom-pager .el-pager li{
+  background-color: transparent !important;
+  color: var(--text-secondary) !important;
+}
+.custom-pager .el-pager li.is-active{
+  color: var(--accent-color) !important;
+}
+.custom-pager .el-pager li:hover{
+  color: var(--accent-color) !important;
+}
